@@ -1,0 +1,35 @@
+interface N
+{
+    public int Process(int x,int y);
+}
+
+class Sum implements N
+{
+    public int Process(int x,int y)
+    {
+        int add;
+        add=x+y;
+        return add;
+    }
+}
+
+class Average implements N
+{
+    public int Process(int x,int y)
+    {
+        int avg;
+        avg=(x+y)/2;
+        return avg;
+    }
+}
+
+public class sumavg
+{
+    public static void main(String[] args)
+    {
+        Sum n=new Sum();
+        System.out.println(" Addition is "+n.Process(5, 9));
+        Average m=new Average();
+        System.out.println(" Average is "+ m.Process(10, 10));
+    }
+}
