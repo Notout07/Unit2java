@@ -1,0 +1,37 @@
+abstract class shape
+{
+    abstract void area();
+}
+
+class Triangle extends shape
+{
+    double b=50, h=20;
+    void area()
+    {
+        double area1;
+        area1=(b*h)/2;
+        System.out.println("Area of Triangle is : " + area1);
+    }
+}
+
+class Rectangle extends shape
+{
+    double l=60, w=30;
+    void area()
+    {
+        double area2;
+        area2=(l*w);
+        System.out.println("Area of Rectangle is : " + area2);
+    }
+}
+
+public class trianglerect
+{
+    public static void main(String args[])
+    {
+        Triangle n= new Triangle();
+        Rectangle v=new Rectangle();
+        n.area();
+        v.area();
+    }
+}
