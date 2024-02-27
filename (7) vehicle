@@ -1,0 +1,32 @@
+abstract class Vehicle
+{
+    abstract public void numWheels();
+}
+
+class car extends Vehicle
+{
+    public void numWheels()
+    {
+        System.out.println("Car has four Wheels");
+    }
+}
+
+class truck extends Vehicle
+{
+    public void numWheels()
+    {
+        System.out.println("Truck has four Wheels");
+    }
+}
+
+public class wheel
+{
+    public static void main(String[] args)
+    {
+        car n=new car();
+        n.numWheels();
+
+        truck v=new truck();
+        v.numWheels();
+    }
+}
