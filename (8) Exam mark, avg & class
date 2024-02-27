@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+interface Exam
+{
+    boolean Pass(int mark);
+}
+interface Classify
+{
+    String Division(int avg);
+}
+
+class Result implements Exam,Classify
+{
+    public boolean Pass(int marks)
+    {
+        if(marks>=35)
+        return true;
+        else
+        return false;
+    }
+    public String Division(int avg)
+    {
+        if(avg>=60)
+        return "First";
+        else if(avg>=50)
+        return "second";
+        else
+        return "no-division";
+    }
+}
+
+public class exammark
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        Result obj=new Result();
+        boolean Pass;
+        String div1;
+        int marks=50,avg=60;
+
+        Pass=obj.Pass(marks);
+        div1=obj.Division(avg);
+        System.out.println(" student's marks is "+marks);
+        System.out.println(" student's average is "+avg);
+        System.out.println(" student's class is "+div1);
+    }
+}
